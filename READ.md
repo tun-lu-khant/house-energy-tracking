@@ -22,5 +22,10 @@ You might have deleted the pre-existing volumes if you are encountering issues w
 
 Under resources -> db.migration create the migration files with the following naming convention:
 
-```V<version_number>__<description>.sql
 ```
+V<version_number>__<description>.sql
+```
+
+## Initial Project Setup
+Go to - File -> Project Structure -> Modules 
+Click '+' button and select the 'Import Module' option. Select the 'backend' folder and click 'OK'. In the next window, select 'Import module from external model' and choose 'Maven'. Click 'Next' and then 'Finish'.
