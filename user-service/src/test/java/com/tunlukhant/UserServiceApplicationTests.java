@@ -23,7 +23,7 @@ class UserServiceApplicationTests {
 	@Disabled
 	@Test
 	void addUsersToDB() {
-		for (int i = 4; i <= NUMBER_OF_USERS; i ++) {
+		for (int i = 1; i <= NUMBER_OF_USERS; i ++) {
 			User user = User.builder()
 					.name("User" + i)
 					.surname("Surname" + i)
