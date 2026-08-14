@@ -1,4 +1,4 @@
-package com.tunlukhant.usage_service.dto;
+package com.tunlukhant.insight_service.dto;
 
 import lombok.Builder;
 
@@ -8,7 +8,6 @@ public record DeviceDto(
         String name,
         String type,
         String location,
-        Long userId,
-        Double energyConsumed
+        double energyConsumed
 ) {
 }

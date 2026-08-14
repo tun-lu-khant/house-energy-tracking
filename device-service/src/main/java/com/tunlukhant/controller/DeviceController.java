@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/devices")
 @RequiredArgsConstructor
@@ -26,6 +28,12 @@ public class DeviceController {
     public ResponseEntity<DeviceDto> getDeviceById(@PathVariable Long id) {
         DeviceDto deviceGetById = deviceService.getDeviceById(id);
         return ResponseEntity.ok(deviceGetById);
+    }
+
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<List<DeviceDto>> getAllDevicesForUser(@PathVariable Long userId) {
+        List<DeviceDto> devices = deviceService.getAllDevicesForUser(userId);
+        return ResponseEntity.ok(devices);
     }
 
     @PutMapping("/{id}")
